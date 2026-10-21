@@ -1,4 +1,4 @@
-# 🎮 Neon Tetris con Docker
+# Neon Tetris con Docker
 
 Aplicación web del juego **Tetris** (HTML5 Canvas + CSS + JavaScript) servida con **Nginx** dentro de un contenedor **Docker**, orquestado con **Docker Compose** y desarrollado en **Visual Studio Code**.
 

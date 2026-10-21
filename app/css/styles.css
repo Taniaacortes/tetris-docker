@@ -58,7 +58,8 @@ header { text-align: center; margin: 24px 16px 12px; }
 .title span:nth-child(6) { animation-delay: .5s; }
 @keyframes bounce { 50% { transform: translateY(-8px); } }
 
-.subtitle { color: var(--muted); font-size: .8rem; margin-top: 10px; letter-spacing: 2px; }
+.author { color: var(--text); font-size: clamp(.9rem, 3vw, 1.2rem); margin-top: 12px; letter-spacing: 1px; }
+.subtitle { color: var(--muted); font-size: .7rem; margin-top: 6px; letter-spacing: 2px; }
 
 /* ===== Layout del juego ===== */
 .game {
