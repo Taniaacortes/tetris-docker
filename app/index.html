@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Tetris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header>
+    <h1 class="title">
+      <span style="--c:#ff3cac">T</span><span style="--c:#ffb800">E</span><span style="--c:#2bff88">T</span><span style="--c:#00e5ff">R</span><span style="--c:#7b61ff">I</span><span style="--c:#ff5e3a">S</span>
+    </h1>
+    <p class="subtitle">Edición Neón · Cómputo en la Nube · Docker</p>
+  </header>
+
+  <main class="game">
+    <!-- Panel izquierdo: pieza guardada y estadísticas -->
+    <aside class="panel">
+      <section class="card">
+        <h2>GUARDADA</h2>
+        <canvas id="hold" width="120" height="120"></canvas>
+      </section>
+      <section class="card stats">
+        <div><span>PUNTOS</span><strong id="score">0</strong></div>
+        <div><span>NIVEL</span><strong id="level">1</strong></div>
+        <div><span>LÍNEAS</span><strong id="lines">0</strong></div>
+        <div><span>RÉCORD</span><strong id="best">0</strong></div>
+      </section>
+    </aside>
+
+    <!-- Tablero principal -->
+    <div class="board-wrap">
+      <canvas id="board" width="300" height="600"></canvas>
+      <div id="overlay" class="overlay">
+        <h2 id="overlay-title">NEON TETRIS</h2>
+        <p id="overlay-text">Presiona <kbd>ENTER</kbd> o el botón para comenzar</p>
+        <button id="start-btn" class="btn">JUGAR</button>
+      </div>
+      <div id="combo" class="combo"></div>
+    </div>
+
+    <!-- Panel derecho: siguientes piezas y controles -->
+    <aside class="panel">
+      <section class="card">
+        <h2>SIGUIENTES</h2>
+        <canvas id="next" width="120" height="300"></canvas>
+      </section>
+      <section class="card controls">
+        <h2>CONTROLES</h2>
+        <ul>
+          <li><kbd>←</kbd><kbd>→</kbd> Mover</li>
+          <li><kbd>↑</kbd> / <kbd>X</kbd> Rotar</li>
+          <li><kbd>Z</kbd> Rotar inverso</li>
+          <li><kbd>↓</kbd> Bajar suave</li>
+          <li><kbd>ESPACIO</kbd> Caída</li>
+          <li><kbd>C</kbd> Guardar</li>
+          <li><kbd>P</kbd> Pausa · <kbd>M</kbd> Sonido</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <!-- Controles táctiles para celular -->
+  <div class="touch">
+    <button data-action="left">◀</button>
+    <button data-action="rotate">⟳</button>
+    <button data-action="right">▶</button>
+    <button data-action="down">▼</button>
+    <button data-action="drop">⤓</button>
+    <button data-action="hold">C</button>
+  </div>
+
+  <footer>Servido con <strong>Nginx</strong> dentro de un contenedor <strong>Docker</strong> 🐳</footer>
+
+  <script src="js/tetris.js"></script>
+</body>
+</html>

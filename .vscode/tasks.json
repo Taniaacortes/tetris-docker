@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docker: levantar Tetris",
+      "type": "shell",
+      "command": "docker compose up -d --build",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: detener Tetris",
+      "type": "shell",
+      "command": "docker compose down",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: ver logs",
+      "type": "shell",
+      "command": "docker compose logs -f tetris",
+      "problemMatcher": []
+    }
+  ]
+}
